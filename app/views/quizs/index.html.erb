@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheets" href="style.css">
+  </head>
+  <body>
+    <div class="button-main">
+      <button onclick="number()" , class="button">スタート</button>
+      <button onclick="answer()" , class="button">答え</button>
+      <div class="button2">
+        <label><input type="checkbox" id="check1">もっと早く</label>
+      </div>
+    </div>
+     <div id="num", class="num"></div>
+     <div id="sum", class="sum"></div>
+
+     <script>
+        let sum = 0;
+        function number(){
+          sum = 0;
+          document.querySelector('#sum').innerHTML = "";
+          let count = 0;
+
+          const countUp = () => {
+            const num = Math.floor( Math.random() * 1001 ) ;
+            sum += num;
+            count += 1;
+            document.querySelector('#num').innerHTML = num;
+
+            if (check1.checked){
+               const timeoutId = setTimeout(countUp, 250);
+               if(count == 10){
+                document.querySelector('#num').innerHTML = "";
+                clearTimeout(timeoutId);
+              }
+            } else {
+              const timeoutId = setTimeout(countUp, 500);
+              if(count == 10){
+                document.querySelector('#num').innerHTML = "";
+                clearTimeout(timeoutId);
+              }
+            }
+
+     
+            
+          }
+          countUp();
+          return {sum:sum};
+        }
+
+        function answer(){
+          document.querySelector('#sum').innerHTML = sum;
+        }
+    </script>
+  </body>
+</html>

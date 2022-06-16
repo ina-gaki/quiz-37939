@@ -1,0 +1,29 @@
+.num{
+  font-size: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sum{
+  font-size: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-main{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+.button{
+  height: 100px;
+  width: 200px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.button2{
+  height: 100px;
+  width: 200px;
+  font-size: 25px;
+  padding: 30px 20px;
+}
